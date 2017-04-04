@@ -29,10 +29,10 @@ jobs:
     steps:
       # Our "install" step is first in the list. It installs your NodeJS dependencies
       # NPM reference document - https://docs.npmjs.com/cli/install
-      - install: /opt/sd/bin/hab pkg install core/git
+      - install: hab pkg install core/git
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
-      - test: hab pkg install core/boost
+      - test: /opt/sd/bin/hab pkg install core/boost
   # We define another Job called "publish". In this stage of the pipeline, we intend
   # on publishing our package to the NPM Registry.
   publish:
