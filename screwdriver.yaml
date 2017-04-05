@@ -32,7 +32,7 @@ jobs:
       - install: /opt/sd/bin/hab pkg install core/curl 1>/dev/null
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
-      - test: /opt/sd/bin/hab pkg install core/boost
+      - test: /opt/sd/bin/hab pkg install core/boost 1>/dev/null
   # We define another Job called "publish". In this stage of the pipeline, we intend
   # on publishing our package to the NPM Registry.
   publish:
