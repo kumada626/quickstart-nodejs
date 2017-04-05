@@ -29,7 +29,8 @@ jobs:
     steps:
       # Our "install" step is first in the list. It installs your NodeJS dependencies
       # NPM reference document - https://docs.npmjs.com/cli/install
-      - install: /opt/sd/bin/hab pkg install core/git　1>/dev/null
+      - install: /opt/sd/bin/hab pkg install core/git　
+      #1>/dev/null
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
       - test: /opt/sd/bin/hab pkg install core/boost
