@@ -1,1 +1,1 @@
-console.error('use package option')
+console.error('(o・∇・o)')
