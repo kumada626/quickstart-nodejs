@@ -2,5 +2,6 @@ jobs:
   main:
     image: node:6
     steps:
-      - command: /opt/sd/sd-step exec core/git git ls-remote https://github.com/screwdriver-cd-test/quickstart-nodejs.git HEAD 1>/dev/null
-      - command-v: /opt/sd/sd-step exec core/git git ls-remote https://github.com/screwdriver-cd-test/functional-git.git HEAD --pkg-version 2.7.4 1>/dev/null
+      - command: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git 1>/dev/null
+      - command-v: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/functional-git.git --pkg-version 2.7.4 1>/dev/null
+      - fail-command: /opt/sd/sd-step exec core/git git clone https://github.com/kumada626/quickstart.git 1>/dev/null
