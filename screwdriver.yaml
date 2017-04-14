@@ -29,7 +29,7 @@ jobs:
     steps:
       # Our "install" step is first in the list. It installs your NodeJS dependencies
       # NPM reference document - https://docs.npmjs.com/cli/install
-      - command: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git 1>/dev/null
+      - command: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
       - command-v: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/functional-git.git --pkg-version 2.7.4 1>/dev/null
