@@ -14,7 +14,7 @@ shared:
   # We specify a common NodeJS Docker image for our Jobs. It takes the form of
   # "repo_name:tag_label", where the "tag_label" is optional.
   # Docker image - https://hub.docker.com/r/library/node/
-  image: node:6
+  image: chefdk
 
 # Jobs definition block
 # All pipelines have "main" by default, and is implicitly defined.
@@ -32,7 +32,7 @@ jobs:
       - command: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git 1>/dev/null
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
-      - command-v: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git --pkg-version 2.7.4 1>/dev/null
+      - command-v: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/functional-git.git --pkg-version 2.7.4 1>/dev/null
   # We define another Job called "publish". In this stage of the pipeline, we intend
   # on publishing our package to the NPM Registry.
   publish:
