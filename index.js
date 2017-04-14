@@ -1,5 +1,1 @@
-'use strict';
-
-module.exports = () => {
-    return 'Hello Node';
-};
+console.error('use package option')
