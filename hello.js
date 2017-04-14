@@ -1,1 +1,1 @@
-console.error("hello world");
+console.error("(*>△<)");
