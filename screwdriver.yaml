@@ -1,6 +1,3 @@
-workflow:
-  - publish
-  
 shared:
   image: petewest/chefdk
   
