@@ -1,6 +1,6 @@
 jobs:
   main:
-    image: alpine
+    image: petewest/chefdk:stable
     steps:
       - test: git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git
       - command: /opt/sd/sd-step exec core/git git clone https://github.com/screwdriver-cd-test/quickstart-nodejs.git 1>/dev/null
